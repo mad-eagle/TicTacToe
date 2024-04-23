@@ -1,0 +1,175 @@
+@font-face {
+    font-family: myFont;
+    src: url(../resources/Ubuntu-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "myFont", sans-serif;
+    user-select: none;
+}
+body{
+    background-color: #ccf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page{
+    height: 90%;
+    width: 90%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#welcomeBox{
+    height: 350px;
+    width: 350px;
+    /* background-color: #999; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#upperSection{
+    height: 50%;
+    width: 100%;
+    /* background-color: rgb(255, 131, 224); */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lowerSection{
+    height: 50%;
+    width: 100%;
+    /* background-color: hotpink; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#upperContainer{
+    /* background-color: #888; */
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    
+}
+#imageSection{
+    /* background-color: #888; */
+    position: relative;
+}
+#imageSection img {
+    /* background-color: #666; */
+    height: 100%;
+    position: absolute;
+    left: -10;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #888;
+    filter: drop-shadow(2px 2px 5px #555);
+}
+#textSection{
+    /* background-color: red; */
+    width: 65%;
+    height: 110%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+#bigText{
+    height: 60%;
+    width: 100%;
+    /* background-color: #555; */
+    font-size: 3rem;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 5px 5px 10px #555;
+    -webkit-text-stroke: 0.5px black;
+}
+#smallText{
+    /* background-color: #a7a7a7; */
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: right;
+}
+#smallText #text{
+    height: 70%;
+    width: 80%;
+    /* background-color: red; */
+    display: flex;
+}
+#smallText #text #totext{
+    width: 20%;
+    height: 100%;
+    /* background-color: #888; */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    text-shadow: 2px 2px 2.25px #555;
+}
+#smallText #text #mainText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.40rem;
+    color: transparent;
+    text-shadow: 2px 2px 5px #555;
+    -webkit-text-stroke: 0.5px black
+}
+form{
+    /* background-color: #555; */
+    height: 25%;
+    width: 90%;
+    margin: 60px 0 0 0;
+    position: relative;
+}
+form input{
+    align-self: center;
+    line-height: 30px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 0;
+    box-shadow: 5px 5px 10px #888;
+    outline: none;
+    text-align: center;
+    padding: 2px 25px;
+    font-size: 1.3rem;
+    font-weight: 0;
+}
+form label img{
+    height: 60%;
+    top: 20%;
+    left: 10px;
+    position: absolute;
+}
+#login{
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    /* background-color: red; */
+    position: absolute;
+    font-size: 35px;
+    right: 5px;
+    top: 10%;
+    border: none;
+    display: none;
+}
+form input:valid ~ #login{
+    display: block;
+}

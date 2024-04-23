@@ -1,0 +1,321 @@
+@font-face {
+    font-family: myFont;
+    src: url("../resources/Ubuntu-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "myFont", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #ccf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../resources/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page {
+    height: 90%;
+    width: 90%;
+    background-color: #999;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+#sideBar {
+    height: calc(100% - 20px);
+    width: 150px;
+    background-color: #777;
+    border-radius: 10px;
+    padding: 7px 5px;
+}
+
+#sideBar #titleBox {
+    background-color: #444;
+    color: #999;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#sideBar #usersList {
+    background-color: #444;
+    margin-top: 5px;
+    border-radius: 10px;
+    height: calc(100% - 45px);
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.userBox {
+    background-color: #999;
+    margin: 5px 5px;
+    margin-bottom: 0px;
+    position: relative;
+    width: calc(100% - 30px);
+    border-radius: 17px;
+    font-size: 1.1rem;
+    color: aqua;
+    padding: 2px 10px;
+    display: flex;
+}
+
+.userAddBtn {
+    width: 20px;
+    right: 5px;
+    position: absolute;
+}
+
+.userAddBtnClicked {
+    opacity: 20%;
+}
+
+#notificationListBox {
+    border-radius: 10px;
+    /* background-color: hotpink; */
+    position: absolute;
+    height: 70%;
+    width: calc(90% - 150px);
+    right: 0;
+    bottom: 0;
+    margin: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notificationList {
+    height: 100%;
+    width: 100%;
+    /* background-color: #444; */
+    /* margin: 6px; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.notification {
+    height: 10%;
+    width: 90%;
+    /* background-color: #ccf; */
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.messageBox {
+    background-color: #ccf;
+    text-align: center;
+    color: white;
+    height: 1.2rem;
+    width: 58%;
+    margin: 0 6 0 15px;
+    border-radius: 10px;
+}
+
+.buttonBox {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accept {
+    height: 1.2rem;
+    background-color: green;
+    color: #999;
+    margin: 0 4px 0 auto;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.reject {
+    height: 1.2rem;
+    margin: 0 auto 0 4px;
+    background-color: red;
+    color: #999;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+
+#page2 {
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+
+#board {
+    border-radius: 70px;
+    box-shadow: 1px 1px 10px #666;
+    height: 75vmin;
+    width: 75vmin;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#gameStatus {
+    border-radius: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3vmin 0 0 0;
+    box-shadow: 1px 1px 10px #666;
+}
+
+.box {
+    background-color: #888;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 80%;
+    width: 80%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13vmin;
+    color: white;
+}
+
+.myCard {
+    color: red;
+}
+
+.oponentCard {
+    color: blue;
+}
+
+.winCard {
+    border: 5px solid red;
+    box-shadow: 2px 2px 10px #000;
+}
+
+#exitBtn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 2rem;
+    width: 2rem;
+    padding: 5px 10px;
+    margin: 10px 30px;
+    margin: 20px;
+    border-radius: 2px 40px 40px 2px;
+    box-shadow: 5px 5px 10px #444;
+    transform: rotateY(180deg);
+}
+
+#restartBtn {
+    position: absolute;
+    left: 65px;
+    top: 10px;
+    height: 2rem;
+    width: 2rem;
+    padding: 5px 10px;
+    margin: 10px 30px;
+    margin: 20px;
+    border-radius: 2px 40px 40px 2px;
+    box-shadow: 5px 5px 10px #444;
+    display: none;
+}
+
+@media screen and (max-width:599px) {
+    #notificationListBox {
+        height: 80%;
+    }
+
+    .notification {
+        width: 100%;
+        background-color: #cff;
+    }
+
+    .buttonBox {
+        flex-direction: column;
+    }
+
+    .accept {
+        height: 1rem;
+        margin: auto 0 1px 0;
+        font-size: 0.8rem;
+    }
+
+    .reject {
+        height: 1rem;
+        margin: 1px 0 auto 0;
+        font-size: 0.8rem;
+    }
+
+    .messageBox {
+        font-size: 0.8rem;
+        height: 0.9rem;
+        background-color: transparent;
+        color: #444;
+    }
+
+    #board {
+        border-radius: 45px;
+    }
+
+    #exitBtn {
+        top: -10;
+        left: -10px;
+    }
+
+    #restartBtn {
+        top: -10px;
+        left: 45px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #notificationList {
+        width: 70%;
+    }
+
+    .notification {
+        border: 0px;
+    }
+
+    .buttonBox {
+        width: 35%;
+        display: flex;
+    }
+}
+
+@media screen and (max-width:420px) {
+    #sidebar {
+        width: 135px;
+    }
+
+    #notificationListBox {
+        width: calc(90% - 130px);
+    }
+
+    #notificatinList {
+        margin: 0;
+    }
+}

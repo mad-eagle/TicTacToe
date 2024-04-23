@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Document</title>
+    <meta name="theme-color" content="#ccf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/game.css">
+    <script src="socket.io/socket.io.js"></script>
+    <script defer src="scripts/game.js"></script>
+    <script>const username = "#{username}"</script>
+</head>
+<body>
+    <div class="page" id="page1">
+        <div id="sideBar">
+            <div id="titleBox">All Users</div>
+            <div id="usersList"></div>
+        </div>
+
+        <div id="notificationListBox">
+            <div id="notificationList"></div>
+        </div>
+    </div>
+
+    <div class="page" id="page2">
+        <div id="game">
+            <img id="exitBtn" src="resources/exit-outline.svg" alt="exit">
+            <img id="restartBtn" src="resources/reload-outline.svg" alt="restart">
+            <div id="board">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div id="gameStatus">Status</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Document</title>
+    <meta name="theme-color" content="#ccf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <script defer src="scripts/typed.js"></script>
+    <script defer src="scripts/login.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="welcomeBox">
+            <div id="upperSection">
+                <div id="upperContainer">
+                    <div id="imageSection">
+                        <img src="resources/eagleLogo.png" alt="eagleLogo">
+                    </div>
+                    <div id="textSection">
+                        <div id="bigText">Welcome</div>
+                        <div id="smallText">
+                            <div id="text">
+                                <div id="toText">To</div>
+                                <div id="mainText">TIC TAC TOE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lowerSection">
+                <form action="/game" method="post">
+                    <label for="username" id="userIcon">
+                        <img src="resources/person-outline.svg" alt="Person Logo">
+                    </label>
+                    <input id="username" name="username" type="text" minlength="3" required>
+                    <button id="login" type="submit">
+                        <img src="resources/arrow-forward-circle-outline.svg" alt="Submit">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
